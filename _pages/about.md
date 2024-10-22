@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='https://www.coeptech.ac.in/'>College of Engineering Pune</a>
 
 profile:
   align: right
@@ -18,8 +18,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Passionate about the tri-junction between computer science, mathematics and Machine Learning, I'm currently pursuing my Major in Computer Science along with a Minor in Quantitative Finance. 
+I have a strong background in core CS subjects with focus on Machine Learning, Deep Learning and Statistical Analysis. 
+I have successfully completed the Japanese Language Proficiency Test (JLPT) N5 and N4 certification, showcasing my dedication and proficiency in the Japanese language.
+Outside the realms of coding, you'll often find me exploring diverse cultures, writing blogs and absorbing knowledge. An avid mountaineer and language enthusiast, I believe that true innovation stems from embracing different perspectives.
