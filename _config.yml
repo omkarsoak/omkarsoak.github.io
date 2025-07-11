@@ -43,7 +43,7 @@ plugins:
 # Build settings
 theme: minima
 
-#remote_theme: jekyll/minima
+remote_theme: jekyll/minima
 
 # minima: 
 #   date_format:  "%b %-d %Y"
