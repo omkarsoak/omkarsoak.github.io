@@ -1,0 +1,85 @@
+---
+layout: default
+---
+<style>
+    .main-table {
+    width:100%;
+    border:0px;
+    border-spacing:0px;
+    border-collapse:separate;
+    margin-right:auto;
+    margin-left:auto;
+    }
+
+    .publication-photo-td {
+    padding:20px;
+    width:25%;
+    vertical-align:middle
+    }
+
+    .publication-photo-td img {
+
+    width: 115%;
+    height: 100%;
+    border-style: none;
+    align-items: center;
+    }
+
+    .publication-info-td {
+    width:75%;
+    vertical-align:middle
+    }
+</style>
+<article class="post">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title | escape }}</h1>
+    </header>
+    <table class="main-table">
+        <tbody>
+          <tr>
+            <td class="publication-photo-td" style="border:0px; padding-left: 0px;">
+              <img src={{page.publication1-img}}>
+            </td>
+            <td class="publication-info-td" style="border:0px; padding-left: 0px;">
+              <a href={{page.publication1-link}}>
+                <papertitle>{{page.publication1-name}}</papertitle>
+              </a>
+              <br>{{page.publication1-authors}}<br>
+              {{page.publication1-publisher}} <br>
+              <a href={{page.publication1-link}}>Paper</a> / <a href={{page.publication1-code}}>Code</a> <br>
+              {{page.publication1-info}}
+            </td>
+          </tr>
+
+          <tr>
+            <td class="publication-photo-td" style="border:0px; padding-left: 0px;">
+              <img src={{page.publication2-img}}>
+            </td>
+            <td class="publication-info-td" style="border:0px; padding-left: 0px;">
+              <a href={{page.publication2-link}}>
+                <papertitle>{{page.publication2-name}}</papertitle>
+              </a>
+              <br>{{page.publication2-authors}}<br>
+              {{page.publication2-publisher}} <br>
+              <a href={{page.publication2-link}}>Paper</a> / <a href={{page.publication2-code}}>Code</a> <br>
+              {{page.publication2-info}}
+            </td>
+          </tr>
+
+          <tr>
+            <td class="publication-photo-td" style="border:0px; padding: 0px;">
+              <img src={{page.publication3-img}}>
+            </td>
+            <td class="publication-info-td" style="border:0px; padding: 0px;">
+              <a href={{page.publication3-link}}>
+                <papertitle>{{page.publication3-name}}</papertitle>
+              </a>
+              <br>{{page.publication3-authors}}<br>
+              {{page.publication3-publisher}} <br>
+              <a href={{page.publication3-link}}>Paper</a> / <a href={{page.publication3-code}}>Code</a> <br>
+              {{page.publication3-info}}
+            </td>
+          </tr>        
+        </tbody>
+      </table>
+</article>
