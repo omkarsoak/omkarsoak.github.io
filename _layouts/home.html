@@ -1,52 +1,67 @@
----
-layout: default
----
+{%- include head.html -%}
 
-<div class="home">
-  {%- if page.title -%}
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
-  {%- endif -%}
+<body>
+  {%- include header.html -%}
 
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2> -->
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li class="post-list-item">
-        <!-- Title & meta always span full width, above -->
-        <header class="post-header-inline">
-          <h3 class="post-title-inline">
-            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-          </h3>
-          <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+  <div class="container" style="max-width: 800px;">
+    <div class="row mt-4">
+      <div class="col-12">
+        {%- if page.title -%}
+        <header class="mb-4" style="border-bottom: 1px solid #e7e7e7; padding-bottom: 1rem;">
+          <h1 class="h2">{{ page.title | escape }}</h1>
         </header>
-    
-        <!-- Excerpt + thumbnail flex container -->
-        <div class="excerpt-flex">
-          {%- if post.thumbnail -%}
-          <div class="excerpt-thumb">
-            <a href="{{ post.url | relative_url }}">
-              <img src="{{ post.thumbnail }}" alt="{{ post.title | escape }}">
-            </a>
-          </div>
-          {%- endif -%}
-          <div class="excerpt-text">
-            <p>
-              {{ post.excerpt }}...
-              <a class="read-more" href="{{ post.url | relative_url }}">
-                read more
-              </a>
-            </p>
+        {%- endif -%}
+
+        {{ content }}
+
+        {%- if site.posts.size > 0 -%}
+        <div class="posts-section mt-4">
+          <div class="row">
+            <div class="col-12">
+              {%- for post in site.posts -%}
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                  <!-- Title & meta -->
+                  <div class="mb-3">
+                    <h4 class="card-title">
+                      <a href="{{ post.url | relative_url }}" class="text-decoration-none">{{ post.title | escape }}</a>
+                    </h4>
+                    <small class="text-muted">{{ post.date | date: "%B %-d, %Y" }}</small>
+                  </div>
+                  
+                  <!-- Excerpt + thumbnail -->
+                  <div class="row">
+                    {%- if post.thumbnail -%}
+                    <div class="col-md-3">
+                      <a href="{{ post.url | relative_url }}">
+                        <img src="{{ post.thumbnail }}" class="img-fluid rounded" alt="{{ post.title | escape }}">
+                      </a>
+                    </div>
+                    <div class="col-md-9">
+                    {%- else -%}
+                    <div class="col-12">
+                    {%- endif -%}
+                      <p class="card-text">
+                        {{ post.excerpt }}
+                        <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-sm ml-2">
+                          Read more
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {%- endfor -%}
+            </div>
           </div>
         </div>
-      </li>
-      {%- endfor -%}
-    </ul>     
+        {%- endif -%}
 
-    <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
-  {%- endif -%}
+      </div>
+    </div>
+  </div>
+</body>
 
-</div>
+{%- include footer.html -%}
+
+</html>

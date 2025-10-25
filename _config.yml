@@ -54,7 +54,6 @@ remote_theme: jekyll/minima@d4d779a
 
 header_pages:
   - index.md
-  - publications.md
   - blogs.md
   - cool_stuff.md
 
