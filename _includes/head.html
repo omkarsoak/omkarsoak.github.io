@@ -17,4 +17,37 @@
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
+  
+  <!-- Language Toggle JavaScript -->
+  <script>
+    let currentLang = 'en';
+    
+    function toggleLanguage() {
+      const langText = document.getElementById('lang-text');
+      const enElements = document.querySelectorAll('.lang-en');
+      const jaElements = document.querySelectorAll('.lang-ja');
+      
+      if (currentLang === 'en') {
+        // Hide English, show Japanese
+        enElements.forEach(el => el.style.display = 'none');
+        jaElements.forEach(el => el.style.display = 'block');
+        langText.textContent = 'English';
+        currentLang = 'ja';
+      } else {
+        // Show English, hide Japanese
+        enElements.forEach(el => el.style.display = 'block');
+        jaElements.forEach(el => el.style.display = 'none');
+        langText.textContent = '日本語';
+        currentLang = 'en';
+      }
+    }
+    
+    // Set default language
+    document.addEventListener('DOMContentLoaded', function() {
+      const langText = document.getElementById('lang-text');
+      if (langText) {
+        langText.textContent = '日本語';
+      }
+    });
+  </script>
 </head>

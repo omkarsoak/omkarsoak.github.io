@@ -1,16 +1,17 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <div class="container" style="max-width: 800px;">
-    <a class="navbar-brand mb-0 h1" href="index.html">Omkar Oak</a>
+    <a class="navbar-brand mb-0 h1" href="/index">Omkar Oak</a>
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item"><a class="nav-link" href="/blogs">Blogs</a></li>
-        <li class="nav-item"><a class="nav-link" href="/cool_stuff">Cool stuff</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blogs">Blogs</a>
+        </li>
       </ul>
     </div>
     <div class="navbar-text">
-
-      <a href="index_jp.html" class="btn btn-secondary btn-sm" role="button">Japanese</a>
-
+      <button id="lang-toggle" class="btn btn-secondary btn-sm" onclick="toggleLanguage()">
+        <span id="lang-text">日本語</span>
+      </button>
     </div>
   </div>
 </nav>

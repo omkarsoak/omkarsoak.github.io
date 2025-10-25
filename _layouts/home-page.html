@@ -5,26 +5,40 @@
 
   <div class="container" style="max-width: 800px;">
 
+    <!-- Profile Section -->
     <div class="row mt-3">
       <div class="col-sm-3">
         <img src="assets/prof_pic.jpg" class="img-fluid rounded-lg" alt="Profile pic">
       </div>
       <div class="col-sm-9">
-        <h2>{{site.data.about.name}}</h2>
-        <h5>{{site.data.about.title}}</h5>
-        <p>{{site.data.about.intro}}</p>
+        <h2 class="lang-en">{{site.data.about.en.name}}</h2>
+        <h2 class="lang-ja" style="display: none;">{{site.data.about.ja.name}}</h2>
+        
+        <h5 class="lang-en">{{site.data.about.en.title}}</h5>
+        <h5 class="lang-ja" style="display: none;">{{site.data.about.ja.title}}</h5>
+        
+        <p class="lang-en">{{site.data.about.en.intro}}</p>
+        <p class="lang-ja" style="display: none;">{{site.data.about.ja.intro}}</p>
       </div>
     </div>
+
+    <!-- Extra Info Section -->
     <div class="d-flex flex-row">
       <div class="pr-3">
-        <p>{{site.data.about.extra}}</p>
+        <p class="lang-en">{{site.data.about.en.extra}}</p>
+        <p class="lang-ja" style="display: none;">{{site.data.about.ja.extra}}</p>
       </div>
     </div>
 
+    <!-- Address Section -->
     <div class="d-flex flex-row">
-      <div class="pr-3"><i class="fa fa-home"></i> {{site.data.about.address}}</div>
+      <div class="pr-4 d-inline">
+        <i class="fa fa-home"></i> 
+        {{site.data.about.en.address}}
+      </div>
     </div>
 
+    <!-- Contact Links (Common for both languages) -->
     <div class="row">
       <div class="col-sm-5">
         <div class="d-flex flex-row">
@@ -58,27 +72,27 @@
       </div>
     </div>
 
+    <!-- News Section -->
     <div class="row mb-3">
       <div class="col-sm-12">
         <section id="News">
-          <h2><strong>News</strong></h2>
+          <h2 class="lang-en"><strong>News</strong></h2>
+          <h2 class="lang-ja" style="display: none;"><strong>ニュース</strong></h2>
         </section>
-        <!-- =========== scroll =========== -->
         <ul class="overflow-auto bg-light border rounded pt-2" style="max-height: 300px;">
-
           {% for item in site.data.news %}
             <li>[ {{ item.date }} ] {{ item.text }}</li>
           {% endfor %}
-
         </ul>
       </div>
     </div>
 
-
+    <!-- Publications Section -->
     <div class="row mb-3">
       <div class="col-sm-12">
         <section id="Publications">
-          <h2><strong>Publications</strong></h2>
+          <h2 class="lang-en"><strong>Publications</strong></h2>
+          <h2 class="lang-ja" style="display: none;"><strong>論文</strong></h2>
         </section>
 
         {% for pub in site.data.publications %}
@@ -92,35 +106,41 @@
             <h5>{{pub.name}}</h5>
             <p>{{pub.authors}}<br>
               <em>{{pub.publisher}}</em><br>
-              <a href={{pub.link}} class="badge badge-primary">Paper</a>
-              <a href={{pub.code}} class="badge badge-primary">Code</a>
+              <a href={{pub.link}} class="badge badge-primary">
+                <span class="lang-en">Paper</span>
+                <span class="lang-ja" style="display: none;">論文</span>
+              </a>
+              <a href={{pub.code}} class="badge badge-primary">
+                <span class="lang-en">Code</span>
+                <span class="lang-ja" style="display: none;">コード</span>
+              </a>
             </p>
           </div>
         </div>
         {% endfor %}
-
-        <div class="row mb-3">
-          <div class="col-sm-12">
-            <section id="Publications">
-              <h2><strong>Publications</strong></h2>
-            </section>
-
-            <h4>Conference</h4>
-            {% for pub in site.data.publications %}
-            <ul>
-              <li class="mb-2">
-                <strong>{{ pub.name }}</strong><br>
-                {{pub.authors}}<br>
-                <em>{{pub.publisher}}</em><br>
-                <a href={{pub.link}} class="badge badge-primary">Paper</a>
-                <a href={{pub.code}} class="badge badge-primary">Code</a>
-              </li>
-            </ul>
-            {% endfor %}
-          </div>
-        </div>
       </div>
     </div>
+
+    <!-- Cool Stuff Section -->
+    <div class="row mb-3">
+      <div class="col-sm-12">
+        <section id="CoolStuff">
+          <h2 class="lang-en"><strong>Cool Stuff</strong></h2>
+          <h2 class="lang-ja" style="display: none;"><strong>面白いもの</strong></h2>
+        </section>
+        
+        <ul style="list-style: disc; list-style-position: outside; padding-left: 1.25rem;"></ul>
+          {% for item in site.data.cool_stuff %}
+            <li class="mb-3">
+              <strong>{{ item.title }}</strong>
+              <em>{{ item.content }}</em> --
+              <a href="{{ item.link }}">{{ item.author }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
   </div>
 </body>
 
