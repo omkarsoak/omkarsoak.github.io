@@ -1,8 +1,15 @@
-- date: "2025.09"
-  text: "Two papers have been accepted for NeurIPS 2025 WS!"
+en:
+  - date: "2025.09"
+    text: "Two papers have been accepted for NeurIPS 2025 WS!"
+  - date: "2025.05"
+    text: "One paper has been accepted for ICIP 2025!"
+  - date: "2025.04"
+    text: "We will host <a href='https://vecdb-ws.github.io/icml2025/index.html'>The 1st Workshop on Vector Databases</a> at ICML 2025. We look forward to your submissions."
 
-- date: "2025.05"
-  text: "One paper has been accepted for ICIP 2025!"
-
-- date: "2025.04"
-  text: "We will host <a href='https://vecdb-ws.github.io/icml2025/index.html'>The 1st Workshop on Vector Databases</a> at ICML 2025. We look forward to your submissions."
+ja:
+  - date: "2025.09"
+    text: "NeurIPS 2025 WSに2本の論文が採択されました!"
+  - date: "2025.05"
+    text: "ICIP 2025に1本の論文が採択されました!"
+  - date: "2025.04"
+    text: "ICML 2025で<a href='https://vecdb-ws.github.io/icml2025/index.html'>第1回ベクターデータベースワークショップ</a>を主催します。投稿をお待ちしています。"

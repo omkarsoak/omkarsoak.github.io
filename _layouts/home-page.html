@@ -8,7 +8,7 @@
     <!-- Profile Section -->
     <div class="row mt-3">
       <div class="col-sm-3">
-        <img src="assets/prof_pic.jpg" class="img-fluid rounded-lg" alt="Profile pic">
+        <img src="assets/prof_pic.png" class="img-fluid rounded-lg mb-2" alt="Profile pic">
       </div>
       <div class="col-sm-9">
         <h2 class="lang-en">{{site.data.about.en.name}}</h2>
@@ -80,9 +80,16 @@
           <h2 class="lang-ja" style="display: none;"><strong>ニュース</strong></h2>
         </section>
         <ul class="overflow-auto bg-light border rounded pt-2" style="max-height: 300px;">
-          {% for item in site.data.news %}
-            <li>[ {{ item.date }} ] {{ item.text }}</li>
-          {% endfor %}
+          <div class="lang-en">
+            {% for item in site.data.news.en %}
+              <li>[ {{ item.date }} ] {{ item.text }}</li>
+            {% endfor %}
+          </div>
+          <div class="lang-ja" style="display: none;">
+            {% for item in site.data.news.ja %}
+              <li>[ {{ item.date }} ] {{ item.text }}</li>
+            {% endfor %}
+          </div>
         </ul>
       </div>
     </div>
@@ -129,11 +136,11 @@
           <h2 class="lang-ja" style="display: none;"><strong>面白いもの</strong></h2>
         </section>
         
-        <ul style="list-style: disc; list-style-position: outside; padding-left: 1.25rem;"></ul>
+        <ul style="padding-left: 1.25rem">
           {% for item in site.data.cool_stuff %}
             <li class="mb-3">
               <strong>{{ item.title }}</strong>
-              <em>{{ item.content }}</em> --
+              <em>{{ item.content }}</em> &ndash; 
               <a href="{{ item.link }}">{{ item.author }}</a>
             </li>
           {% endfor %}
