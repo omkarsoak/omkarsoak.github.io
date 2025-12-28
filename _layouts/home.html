@@ -19,14 +19,14 @@
           <div class="row">
             <div class="col-12">
               {%- for post in site.posts -%}
-              <div class="card mb-4 shadow-sm">
+              <div class="card mb-4 shadow-sm border-secondary">
                 <div class="card-body">
                   <!-- Title & meta -->
                   <div class="mb-3">
                     <h4 class="card-title">
                       <a href="{{ post.url | relative_url }}" class="text-decoration-none">{{ post.title | escape }}</a>
                     </h4>
-                    <small class="text-muted">{{ post.date | date: "%B %-d, %Y" }}</small>
+                    <h6 class="text-muted">{{ post.date | date: "%B %-d, %Y" }}</h6>
                   </div>
                   
                   <!-- Excerpt + thumbnail -->
@@ -43,10 +43,8 @@
                     {%- endif -%}
                       <p class="card-text">
                         {{ post.excerpt }}
-                        <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-sm ml-2">
-                          Read more
-                        </a>
                       </p>
+                      <a href="{{ post.url | relative_url }}" class="card-link">Read more</a>
                     </div>
                   </div>
                 </div>

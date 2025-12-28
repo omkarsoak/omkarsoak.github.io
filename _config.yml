@@ -40,6 +40,15 @@ plugins:
   - jekyll-seo-tag
   - jekyll-remote-theme
 
+permalink: /:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: /blogs/:title/
+
 # Build settings
 #theme: minima
 
