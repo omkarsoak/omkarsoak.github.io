@@ -1,16 +1,16 @@
 en:
   name: Omkar Oak
-  title: <a href="https://www.coeptech.ac.in/">College of Engineering, Pune</a>
-  intro: I'm curious about anything and everything that involves thinking. I also enjoy a lot of things that don't require thinking. I completed my Bachelor's degree in Computer Engineering with a Minor in Quant Finance from the <a href="https://www.coeptech.ac.in/">College of Engineering Pune</a>. I'm interested in working on topics in computer vision, robotics, machine learning, remote sensing and math.
+  title: <a href="https://www.u-tokyo.ac.jp/en/">The University of Tokyo</a>
+  intro: I'm curious about anything and everything that involves thinking. I also enjoy a lot of things that don't require thinking. I am currently a master's student at <a href="https://www.u-tokyo.ac.jp/en/">The University of Tokyo</a>. I completed my Bachelor's degree in Computer Engineering with a Minor in Quant Finance from the <a href="https://www.coeptech.ac.in/">College of Engineering Pune</a>. I'm interested in working on topics in computer vision, robotics, machine learning, remote sensing and math.
   extra: During my engineering days, I was part of the <a href="">COEP Rowing Crew</a> and I participated in the 94th and 95th Regattas. Falling into the Mutha river right on the warf is one of my achievements. I <s>rarely</s> write Computer Science blogs on <a href="">Medium</a>. For fun blogs visit <a href="/blogs">here</a>. In my free time, you will find me reading Japanese newspapers or writing Kanji in a square notebook. Nonetheless, I am equally bad at both. Occasionally, I also enjoy climbing mountains and listening to classical music.
-  address: College of Engineering Pune, Shivajinagar, Pune 411005, India
+  address: The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo
 
 ja:
-  name: オムカル・オーク
-  title: <a href="https://www.coeptech.ac.in/">プネ工科大学</a>
-  intro: 私は考えることを伴うあらゆることに興味があります。また、考えることを必要としない多くのことも楽しんでいます。<a href="https://www.coeptech.ac.in/">プネ工科大学</a>でコンピューターエンジニアリングの学士号とクオンツファイナンスの副専攻を取得しました。コンピュータービジョン、ロボティクス、機械学習、リモートセンシング、数学の分野での研究に興味があります。
+  name: オーク・オムカール
+  title: <a href="https://www.u-tokyo.ac.jp/en/">東京大学</a>
+  intro: 私は考えることを伴うあらゆることに興味があります。また、考えることを必要としない多くのことも楽しんでいます。<a href="https://www.u-tokyo.ac.jp/en/">東京大学</a>でコンピューターエンジニアリングの修士号を取得しました。コンピュータービジョン、ロボティクス、機械学習、リモートセンシング、数学の分野での研究に興味があります。
   extra: 工学部時代は<a href="">COEPローイングクルー</a>の一員として、第94回と第95回レガッタに参加しました。ワーフでムタ川に落ちることは私の実績の一つです。コンピューターサイエンスのブログを<a href="">Medium</a>で<s>たまに</s>書いています。楽しいブログは<a href="/blogs">こちら</a>をご覧ください。自由時間には日本の新聞を読んだり、可愛い方眼ノートに漢字を書いたりしています。どちらも同じくらい下手ですが。時々、山登りやクラシック音楽鑑賞も楽しんでいます。
-  address: プネ工科大学、シヴァジナガール、プネ 411005、インド
+  address: 東京都文京区本郷 7-3-1, 東京大学
 
 CV: <a href="assets/OmkarOakCV.pdf">CV</a>
 github: <a href="https://github.com/omkarsoak">Github</a>

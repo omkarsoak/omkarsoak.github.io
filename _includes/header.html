@@ -9,9 +9,20 @@
       </ul>
     </div>
     <div class="navbar-text">
-      <button id="lang-toggle" class="btn btn-secondary btn-sm" onclick="toggleLanguage()">
-        <span id="lang-text">日本語</span>
-      </button>
+      {% if page.lang == "ja" %}
+  <button
+    class="btn btn-secondary btn-sm"
+    onclick="window.location.href='{{ '/' | relative_url }}'">
+    English
+  </button>
+  {% else %}
+    <button
+      class="btn btn-secondary btn-sm"
+      onclick="window.location.href='{{ '/ja/' | relative_url }}'">
+      日本語
+    </button>
+  {% endif %}
+
     </div>
   </div>
 </nav>

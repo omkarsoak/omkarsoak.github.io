@@ -50,9 +50,9 @@ defaults:
       permalink: /blogs/:title/
 
 # Build settings
-#theme: minima
+theme: minima
 
-remote_theme: jekyll/minima@d4d779a
+#remote_theme: jekyll/minima@d4d779a
 
 # minima: 
 #   date_format:  "%b %-d %Y"

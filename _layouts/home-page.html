@@ -1,155 +1,203 @@
 {%- include head.html -%}
 
-<body>
-  {%- include header.html -%}
+<body> {%- include header.html -%} 
+<div class="container" style="max-width: 800px;">
+<!-- Profile Section -->
+<div class="row mt-3">
+  <div class="col-sm-3">
+    <img src="{{ '/assets/prof_pic.png' | relative_url }}"
+         class="img-fluid rounded-lg mb-2"
+         alt="Profile pic">
+  </div>
 
-  <div class="container" style="max-width: 800px;">
+  <div class="col-sm-9">
+    <h2>
+      {% if page.lang == "ja" %}
+        {{ site.data.about.ja.name }}
+      {% else %}
+        {{ site.data.about.en.name }}
+      {% endif %}
+    </h2>
 
-    <!-- Profile Section -->
-    <div class="row mt-3">
-      <div class="col-sm-3">
-        <img src="assets/prof_pic.png" class="img-fluid rounded-lg mb-2" alt="Profile pic">
-      </div>
-      <div class="col-sm-9">
-        <h2 class="lang-en">{{site.data.about.en.name}}</h2>
-        <h2 class="lang-ja" style="display: none;">{{site.data.about.ja.name}}</h2>
-        
-        <h5 class="lang-en">{{site.data.about.en.title}}</h5>
-        <h5 class="lang-ja" style="display: none;">{{site.data.about.ja.title}}</h5>
-        
-        <p class="lang-en">{{site.data.about.en.intro}}</p>
-        <p class="lang-ja" style="display: none;">{{site.data.about.ja.intro}}</p>
+    <h5>
+      {% if page.lang == "ja" %}
+        {{ site.data.about.ja.title }}
+      {% else %}
+        {{ site.data.about.en.title }}
+      {% endif %}
+    </h5>
+
+    <p>
+      {% if page.lang == "ja" %}
+        {{ site.data.about.ja.intro }}
+      {% else %}
+        {{ site.data.about.en.intro }}
+      {% endif %}
+    </p>
+  </div>
+</div>
+
+<!-- Extra Info Section -->
+<div class="d-flex flex-row">
+  <div class="pr-3">
+    {% if page.lang == "ja" %}
+      <p>{{ site.data.about.ja.extra }}</p>
+    {% else %}
+      <p>{{ site.data.about.en.extra }}</p>
+    {% endif %}
+  </div>
+</div>
+
+<!-- Address Section -->
+<div class="d-flex flex-row">
+  <div class="pr-4 d-inline">
+    <i class="fa fa-home"></i>
+    {% if page.lang == "ja" %}
+      {{ site.data.about.ja.address }}
+    {% else %}
+      {{ site.data.about.en.address }}
+    {% endif %}
+  </div>
+</div>
+
+<!-- Contact Links (Common for both languages) -->
+<div class="row">
+  <div class="col-sm-5">
+    <div class="d-flex flex-row">
+      <div class="pr-3" style="font-size: 1em;">
+        <i class="fa-solid fa-envelope"></i>
+        <code>oak</code> [at]
+        <code>cvm.t.u-tokyo.ac.jp</code>
       </div>
     </div>
+  </div>
 
-    <!-- Extra Info Section -->
+  <div class="col-sm-2">
     <div class="d-flex flex-row">
       <div class="pr-3">
-        <p class="lang-en">{{site.data.about.en.extra}}</p>
-        <p class="lang-ja" style="display: none;">{{site.data.about.ja.extra}}</p>
+        <i class="fa-solid fa-file"></i>
+        {{ site.data.about.CV }}
       </div>
     </div>
+  </div>
+</div>
 
-    <!-- Address Section -->
+<div class="row mb-4">
+  <div class="col-sm-2">
     <div class="d-flex flex-row">
-      <div class="pr-4 d-inline">
-        <i class="fa fa-home"></i> 
-        {{site.data.about.en.address}}
+      <div class="pr-3">
+        <i class="fa-brands fa-github"></i>
+        {{ site.data.about.github }}
       </div>
     </div>
+  </div>
 
-    <!-- Contact Links (Common for both languages) -->
-    <div class="row">
-      <div class="col-sm-5">
-        <div class="d-flex flex-row">
-          <div class="pr-3" style="font-size: 1em;"><i class="fa-solid fa-envelope"></i> <code>oakos21.comp</code> [at]
-            <code>coeptech.ac.in</code>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-2">
-        <div class="d-flex flex-row">
-          <div class="pr-3"><i class="fa-solid fa-file"></i> {{site.data.about.CV}}</div>
-        </div>
+  <div class="col-sm-3">
+    <div class="d-flex flex-row">
+      <div class="pr-3">
+        <i class="fa-solid fa-graduation-cap"></i>
+        {{ site.data.about.google-scholar }}
       </div>
     </div>
+  </div>
 
-    <div class="row mb-4">
-      <div class="col-sm-2">
-        <div class="d-flex flex-row">
-          <div class="pr-3"><i class="fa-brands fa-github"></i> {{site.data.about.github}}</div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="d-flex flex-row">
-          <div class="pr-3"><i class="fa-solid fa-graduation-cap"></i> {{site.data.about.google-scholar}}</div>
-        </div>
-      </div>
-      <div class="col-sm-2">
-        <div class="d-flex flex-row">
-          <div class="pr-3"><i class="fa-brands fa-square-linkedin"></i> {{site.data.about.linkedin}}</div>
-        </div>
+  <div class="col-sm-2">
+    <div class="d-flex flex-row">
+      <div class="pr-3">
+        <i class="fa-brands fa-square-linkedin"></i>
+        {{ site.data.about.linkedin }}
       </div>
     </div>
+  </div>
+</div>
 
-    <!-- News Section -->
-    <div class="row mb-3">
-      <div class="col-sm-12">
-        <section id="News">
-          <h2 class="lang-en"><strong>News</strong></h2>
-          <h2 class="lang-ja" style="display: none;"><strong>ニュース</strong></h2>
-        </section>
-        <ul class="overflow-auto bg-light border rounded pt-2" style="max-height: 300px;">
-          <div class="lang-en">
-            {% for item in site.data.news.en %}
-              <li>[ {{ item.date }} ] {{ item.text }}</li>
-            {% endfor %}
-          </div>
-          <div class="lang-ja" style="display: none;">
-            {% for item in site.data.news.ja %}
-              <li>[ {{ item.date }} ] {{ item.text }}</li>
-            {% endfor %}
-          </div>
-        </ul>
-      </div>
-    </div>
+<!-- News Section -->
+<div class="row mb-3">
+  <div class="col-sm-12">
+    <section id="News">
+      <h2>
+          {% if page.lang == "ja" %}
+            ニュース
+          {% else %}
+            News
+          {% endif %}
+      </h2>
+    </section>
 
-    <!-- Publications Section -->
-    <div class="row mb-3">
-      <div class="col-sm-12">
-        <section id="Publications">
-          <h2 class="lang-en"><strong>Publications</strong></h2>
-          <h2 class="lang-ja" style="display: none;"><strong>論文</strong></h2>
-        </section>
+    <ul class="overflow-auto bg-light border rounded pt-2"
+        style="max-height: 300px;">
 
-        {% for pub in site.data.publications %}
-        <div class="row mb-3">
-          <div class="col-sm-4">
-              <a href="{{pub.link}}" style="height:100%; display:flex; align-items:center; justify-content:center;">
-                <img src="{{pub.img}}" class="img-fluid" style="max-height:100%; width:auto;" alt="">
-              </a>
-          </div>
-          <div class="col-sm-8">
-            <h5>{{pub.name}}</h5>
-            <p>{{pub.authors}}<br>
-              <em>{{pub.publisher}}</em><br>
-              <a href={{pub.link}} class="badge badge-primary">
-                <span class="lang-en">Paper</span>
-                <span class="lang-ja" style="display: none;">論文</span>
-              </a>
-              <a href={{pub.code}} class="badge badge-primary">
-                <span class="lang-en">Code</span>
-                <span class="lang-ja" style="display: none;">コード</span>
-              </a>
-            </p>
-          </div>
-        </div>
+      {% if page.lang == "ja" %}
+        {% for item in site.data.news.ja %}
+          <li>[ {{ item.date }} ] {{ item.text }}</li>
         {% endfor %}
-      </div>
-    </div>
+      {% else %}
+        {% for item in site.data.news.en %}
+          <li>[ {{ item.date }} ] {{ item.text }}</li>
+        {% endfor %}
+      {% endif %}
 
-    <!-- Cool Stuff Section -->
-    <div class="row mb-3">
-      <div class="col-sm-12">
-        <section id="CoolStuff">
-          <h2 class="lang-en"><strong>Cool Stuff</strong></h2>
-          <h2 class="lang-ja" style="display: none;"><strong>面白いもの</strong></h2>
-        </section>
-        
-        <ul style="padding-left: 1.25rem">
-          {% for item in site.data.cool_stuff %}
-            <li class="mb-3">
-              <strong>{{ item.title }}</strong>
-              <em>{{ item.content }}</em> &ndash; 
-              <a href="{{ item.link }}">{{ item.author }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
+    </ul>
+  </div>
+</div>
+
+<!-- Publications Section -->
+<div class="row mb-3">
+  <div class="col-sm-12">
+    <section id="Publications">
+      <h2>
+        {% if page.lang == "ja" %}
+          論文
+        {% else %}
+          Publications
+        {% endif %}
+      </h2>
+    </section>
+
+    <ul style="padding-left: 1.25rem;">
+      {% for pub in site.data.publications %}
+        <li style="margin-bottom: 0.75rem;">
+          <div>{{ pub.name }}</div>
+          <div>{{ pub.authors }}</div>
+          <div>
+            <em>{{ pub.publisher }}</em>
+            <a href="{{ pub.link }}" class="badge badge-primary"> {% if page.lang == "ja" %} 論文 {% else %} Paper {% endif %} </a>
+            <a href="{{ pub.code }}" class="badge badge-primary"> {% if page.lang == "ja" %}コード {% else %} Code {% endif %} </a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<!-- Cool Stuff Section -->
+<div class="row mb-3">
+  <div class="col-sm-12">
+
+    <section id="CoolStuff">
+      <h2>
+          {% if page.lang == "ja" %}
+            面白いもの
+          {% else %}
+            Cool Stuff
+          {% endif %}
+      </h2>
+    </section>
+
+    <ul style="padding-left: 1.25rem">
+      {% for item in site.data.cool_stuff %}
+        <li class="mb-3">
+          <strong>{{ item.title }}</strong>
+          <em>{{ item.content }}</em> &ndash;
+          <a href="{{ item.link }}">{{ item.author }}</a>
+        </li>
+      {% endfor %}
+    </ul>
 
   </div>
-</body>
+</div>
+
+</div> </body>
 
 {%- include footer.html -%}
 
