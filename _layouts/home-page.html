@@ -19,13 +19,21 @@
       {% endif %}
     </h2>
 
-    <h5>
+    <!-- <h5>
       {% if page.lang == "ja" %}
         {{ site.data.about.ja.title }}
       {% else %}
         {{ site.data.about.en.title }}
       {% endif %}
     </h5>
+
+    <h6>
+      {% if page.lang == "ja" %}
+        {{ site.data.about.ja.location }}
+      {% else %}
+        {{ site.data.about.en.location }}
+      {% endif %}
+    </h6> -->
 
     <p>
       {% if page.lang == "ja" %}
@@ -34,11 +42,18 @@
         {{ site.data.about.en.intro }}
       {% endif %}
     </p>
+    <p>
+      {% if page.lang == "ja" %}
+        {{ site.data.about.ja.extra }}
+      {% else %}
+        {{ site.data.about.en.extra }}
+      {% endif %}
+    </p>
   </div>
 </div>
 
 <!-- Extra Info Section -->
-<div class="d-flex flex-row">
+<!-- <div class="d-flex flex-row">
   <div class="pr-3">
     {% if page.lang == "ja" %}
       <p>{{ site.data.about.ja.extra }}</p>
@@ -46,37 +61,27 @@
       <p>{{ site.data.about.en.extra }}</p>
     {% endif %}
   </div>
-</div>
+</div> -->
 
-<!-- Address Section -->
-<div class="d-flex flex-row">
-  <div class="pr-4 d-inline">
-    <i class="fa fa-home"></i>
-    {% if page.lang == "ja" %}
-      {{ site.data.about.ja.address }}
-    {% else %}
-      {{ site.data.about.en.address }}
-    {% endif %}
+<!-- Address + Email Section -->
+<div class="row mb-2">
+  <div class="col-sm-6">
+    <div class="d-inline">
+      <i class="fa fa-home"></i>
+      {% if page.lang == "ja" %}
+        {{ site.data.about.ja.address }}
+      {% else %}
+        {{ site.data.about.en.address }}
+      {% endif %}
+    </div>
   </div>
-</div>
 
-<!-- Contact Links (Common for both languages) -->
-<div class="row">
-  <div class="col-sm-5">
+  <div class="col-sm-6">
     <div class="d-flex flex-row">
       <div class="pr-3" style="font-size: 1em;">
         <i class="fa-solid fa-envelope"></i>
         <code>oak</code> [at]
         <code>cvm.t.u-tokyo.ac.jp</code>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-2">
-    <div class="d-flex flex-row">
-      <div class="pr-3">
-        <i class="fa-solid fa-file"></i>
-        {{ site.data.about.CV }}
       </div>
     </div>
   </div>
@@ -86,8 +91,26 @@
   <div class="col-sm-2">
     <div class="d-flex flex-row">
       <div class="pr-3">
+        <i class="fa-solid fa-file"></i>
+        {{ site.data.about.CV }}
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-2">
+    <div class="d-flex flex-row">
+      <div class="pr-3">
         <i class="fa-brands fa-github"></i>
         {{ site.data.about.github }}
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-2">
+    <div class="d-flex flex-row">
+      <div class="pr-3">
+        <i class="fa-brands fa-square-linkedin"></i>
+        {{ site.data.about.linkedin }}
       </div>
     </div>
   </div>
@@ -101,18 +124,10 @@
     </div>
   </div>
 
-  <div class="col-sm-2">
-    <div class="d-flex flex-row">
-      <div class="pr-3">
-        <i class="fa-brands fa-square-linkedin"></i>
-        {{ site.data.about.linkedin }}
-      </div>
-    </div>
-  </div>
 </div>
 
 <!-- News Section -->
-<div class="row mb-3">
+<!-- <div class="row mb-3">
   <div class="col-sm-12">
     <section id="News">
       <h2>
@@ -139,7 +154,7 @@
 
     </ul>
   </div>
-</div>
+</div> -->
 
 <!-- Publications Section -->
 <div class="row mb-3">
