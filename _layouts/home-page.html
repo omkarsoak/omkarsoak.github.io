@@ -7,6 +7,7 @@
   <div class="col-sm-3">
     <img src="{{ '/assets/prof_pic.png' | relative_url }}"
          class="img-fluid rounded-lg mb-2"
+         style="max-width: 150px;"
          alt="Profile pic">
   </div>
 
@@ -42,18 +43,18 @@
         {{ site.data.about.en.intro }}
       {% endif %}
     </p>
-    <p>
+    <!-- <p>
       {% if page.lang == "ja" %}
         {{ site.data.about.ja.extra }}
       {% else %}
         {{ site.data.about.en.extra }}
       {% endif %}
-    </p>
+    </p> -->
   </div>
 </div>
 
 <!-- Extra Info Section -->
-<!-- <div class="d-flex flex-row">
+<div class="d-flex flex-row">
   <div class="pr-3">
     {% if page.lang == "ja" %}
       <p>{{ site.data.about.ja.extra }}</p>
@@ -61,7 +62,7 @@
       <p>{{ site.data.about.en.extra }}</p>
     {% endif %}
   </div>
-</div> -->
+</div>
 
 <!-- Address + Email Section -->
 <div class="row mb-2">
@@ -161,27 +162,34 @@
   <div class="col-sm-12">
     <section id="Publications">
       <h2>
-        {% if page.lang == "ja" %}
+        <!-- {% if page.lang == "ja" %}
           論文
         {% else %}
           Publications
-        {% endif %}
+        {% endif %} -->
+        Publications
       </h2>
     </section>
 
-    <ul style="padding-left: 1.25rem;">
-      {% for pub in site.data.publications %}
-        <li style="margin-bottom: 0.75rem;">
-          <div>{{ pub.name }}</div>
-          <div>{{ pub.authors }}</div>
-          <div>
-            <em>{{ pub.publisher }}</em>
-            <a href="{{ pub.link }}" class="badge badge-primary"> {% if page.lang == "ja" %} 論文 {% else %} Paper {% endif %} </a>
-            <a href="{{ pub.code }}" class="badge badge-primary"> {% if page.lang == "ja" %}コード {% else %} Code {% endif %} </a>
-          </div>
-        </li>
-      {% endfor %}
-    </ul>
+  <ol style="padding-left: 0; margin-left: 0; list-style-type: none;">
+  {% assign total_size = site.data.publications | size %}
+  {% assign reversed_pubs = site.data.publications | reverse %}
+  {% for pub in reversed_pubs %}
+    {% assign item_index = total_size | minus: forloop.index0 %}
+    <li style="display: flex; margin-bottom: 0.75rem;">
+      <div style="flex-shrink: 0; width: 2rem;">[{{ item_index }}]</div>
+      <div style="flex-grow: 1;">
+        <div><strong>{{ pub.name }}</strong></div>
+        <div>{{ pub.authors }}</div>
+        <div>
+          {{ pub.publisher }}
+          <a href="{{ pub.link }}" class="badge badge-primary"> {% if page.lang == "ja" %} 論文 {% else %} Paper {% endif %} </a>
+          <a href="{{ pub.code }}" class="badge badge-primary"> {% if page.lang == "ja" %}コード {% else %} Code {% endif %} </a>
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ol>
   </div>
 </div>
 
@@ -191,11 +199,12 @@
 
     <section id="CoolStuff">
       <h2>
-          {% if page.lang == "ja" %}
+          <!-- {% if page.lang == "ja" %}
             面白いもの
           {% else %}
             Cool Stuff
-          {% endif %}
+          {% endif %} -->
+          Cool Stuff
       </h2>
     </section>
 
