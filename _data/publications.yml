@@ -16,7 +16,13 @@
   link: "https://ieeexplore.ieee.org/document/10939989"
   code: "https://github.com/omkarsoak/landslide-detection-DL"
 
-- name: "TERRA-CD: A Multi-Temporal Benchmark Dataset for Urban Multi-Class and Semantic Change Detection"
+- name: "A Temporal Convolutional Network-based Approach for Network Intrusion Detection"
+  authors: "<a href='https://rukmini-17.github.io/'>Rukmini Nazre</a>, <a href='https://scholar.google.com/citations?user=z_eYqtEAAAAJ'>Rujuta Budke</a>, <a href='https://omkarsoak.github.io'> <u>Omkar Oak</u></a>, <a href='https://www.coeptech.ac.in/faculty/dr-sawant-suraj-tanaji/'>Suraj Sawant</a> and <a href='https://www.coeptech.ac.in/faculty/dr-a-d-joshi/'>Amit Joshi</a>"
+  publisher: "International Conference on Integrated Intelligence and Communication Systems (ICIICS), 2024"
+  link: "https://ieeexplore.ieee.org/document/10860234"
+  code: "https://github.com/rukmini-17/TCN-Network-Intrusion-Detection"
+
+- name: "TERRA-CD: A Multi-Temporal Framework for Multi-Class and Semantic Change Detection"
   authors: "<a href='https://omkarsoak.github.io'> <u>Omkar Oak</u></a>, <a href='https://rukmini-17.github.io/'>Rukmini Nazre</a>, <a href='https://scholar.google.com/citations?user=z_eYqtEAAAAJ'>Rujuta Budke</a> and <a href='https://www.coeptech.ac.in/faculty/dr-sawant-suraj-tanaji/'>Suraj Sawant</a>"
   publisher: "11th International Congress on Information and Communication Technology (ICICT) 2026"
   link: "https://arxiv.org/abs/2605.14651"
